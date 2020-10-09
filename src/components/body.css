@@ -1,0 +1,115 @@
+.left{
+    width: 32%;
+    display: inline-block;
+    margin-left: 4vw;
+    color: #253858;
+}
+
+.left a{
+    border-radius: 5px;
+    background-color: rgb(12, 90, 207);
+    color: white;
+    font-size: 2.2vw;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.7vw 2vw;
+}
+
+.right {
+    display: inline-block;
+    width: 55%;
+    margin-left: 5%;
+    padding-right: 20px;
+}
+
+.col {
+    display: inline-block;
+    padding:20px;
+    width: 30%;
+    top: 0;
+}
+.col a{
+    text-decoration: none;
+}
+
+.col a:hover{
+    text-decoration-line: underline;
+}
+
+.backimg {
+    height: 28vw;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-top: 0.75vw;
+    padding-bottom: 0.25vw;
+    background-color: rgb(23, 43, 77);
+}
+
+.auto{
+    width: fit-content;
+    font-size: 1.4vw;
+    font-weight: 500;  
+    color: white; 
+    text-align: center;
+    padding: 10px 20px;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: 1px solid white;
+    text-decoration: none;
+}
+
+.auto:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width:1023px) {
+    .backimg {
+        background-image: url("https://wac-cdn.atlassian.com/dam/jcr:e1b033e1-4d7d-46a3-995c-2a55731e800b/automation-banner-L%20768.svg?cdnVersion=1287") , url("https://wac-cdn.atlassian.com/dam/jcr:43f0949b-f655-4d01-bc18-258b25c74912/automation-banner-R%20768.svg?cdnVersion=1287") ; 
+        background-position: left center , right center ; 
+        background-repeat: no-repeat , no-repeat ; 
+        background-size: auto 100% , auto 100% ;
+    }
+    .left{
+        margin-left: 2vw;
+        display: block;
+        width: 90%;
+    }
+    .right{
+        display: block;
+        width: 60%;
+        text-align: center;
+        margin: 10% auto;
+    }
+    
+}
+
+@media screen and (max-width: 1242px) {
+    .col{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .col{
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .backimg{
+        background-image: url("https://wac-cdn.atlassian.com/dam/jcr:efd533a9-0494-4b71-9c49-425525a7da97/automation-banner-L%201024.svg?cdnVersion=1287") , url("https://wac-cdn.atlassian.com/dam/jcr:fda286e4-106a-4c37-a80e-08818adad41d/automation-banner-R%201024.svg?cdnVersion=1287") ; 
+        background-position: left center , right center ; 
+        background-repeat: no-repeat , no-repeat ; 
+        background-size: auto 100% , auto 100% ;
+    }
+    
+}
+
+/* @media screen and (min-width: 1440px){
+    .backimg{
+        background-image: url("https://wac-cdn.atlassian.com/dam/jcr:4598ed32-5d28-4506-92d2-0a815556e2e4/automation-banner-L.svg?cdnVersion=1287") , url("https://wac-cdn.atlassian.com/dam/jcr:6bfbb10d-d747-40dc-8f31-28383f896f33/automation-banner-R.svg?cdnVersion=1287");
+        background-position: left center , right center ; 
+        background-repeat: no-repeat , no-repeat ; 
+        background-size: auto 100% , auto 100% ;
+    }
+} */

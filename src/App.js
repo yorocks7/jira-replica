@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Header from './components/header';
+import Products from './components/Dropdown/Products';
+import Body from './components/body';
+import Sticky from './components/sticky';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  state={
+    isProducts: false,
+  }
+
+  handleDropdown = (option) => {
+    switch(option){
+      case 'products' : 
+        this.setState({
+          isProducts : !this.state.isProducts,
+        })
+        break;
+
+      default: 
+
+    }
+  }
+
+  render() {
+    let dropdown=null;
+    if(this.state.isProducts)
+    dropdown = <Products/>;
+    return (
+      <div>
+        <Header handleDropdown={this.handleDropdown} />
+        {dropdown}
+        <Sticky/>
+        <Body/>
+      </div>
+    );
+  }
 }
 
 export default App;
